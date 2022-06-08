@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <h2> Souscription here </h2>
+
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <formly-form
+          [model]="model"
+          [fields]="fields"
+          [options]="options"
+          [form]="form">
+
+        </formly-form>
+        <button
+          style="margin-top: 2%"
+          type="submit"
+          class="btn btn-primary submit-button"
+          [disabled]="!form.valid">Submit
+        </button>
+      </form>
+    </div>
+  </div>
+
+</div>
